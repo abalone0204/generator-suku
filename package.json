@@ -1,0 +1,31 @@
+{
+  "name": "generator-suku",
+  "version": "0.0.0",
+  "description": "Yeoman generator",
+  "license": "MIT",
+  "main": "app/index.js",
+  "repository": "abalone0204/generator-suku",
+  "author": {
+    "name": "Tsung Chen Ku",
+    "email": "abalone0204@gmail.com",
+    "url": "https://github.com/abalone0204"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "mkdirp": "^0.5.1",
+    "yeoman-generator": "^0.19.0",
+    "yosay": "^1.0.2"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  }
+}

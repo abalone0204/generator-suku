@@ -5,7 +5,7 @@ var pathToReact = path.resolve(node_modules, 'react/dist/react.min.js');
 var PROD = JSON.parse(process.env.PROD_DEV || "0");
 module.exports = {
     entry: {
-        main: path.resolve(__dirname, 'js/main.js'),
+        main: path.resolve(__dirname, 'js/<%= entry %>'),
     },
     resolve: {
         alias: {

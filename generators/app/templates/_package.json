@@ -2,7 +2,7 @@
   "name": "Suku",
   "version": "1.0.0",
   "description": "A simple server for newbie or developming component",
-  "main": "main.js",
+  "main": "js/<%= entry %>",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "webpack-dev-server"

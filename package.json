@@ -1,9 +1,9 @@
 {
   "name": "generator-suku",
   "version": "0.0.0",
-  "description": "Yeoman generator",
+  "description": "generator for simple component lab",
   "license": "MIT",
-  "main": "app/index.js",
+  "main": "generators/app/index.js",
   "repository": "abalone0204/generator-suku",
   "author": {
     "name": "Tsung Chen Ku",

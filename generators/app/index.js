@@ -83,9 +83,11 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('_style.scss'),
         this.destinationPath('static/stylesheets/style.scss')
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_server.js'),
-        this.destinationPath('server.js')
+        this.destinationPath('server.js',{
+          portNumber: this.props.portNumber
+        })
       );
     }
   },

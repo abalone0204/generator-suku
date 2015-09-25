@@ -24,6 +24,7 @@ module.exports = yeoman.generators.Base.extend({
     }];
 
     this.prompt(prompts, function(props) {
+      console.log(this.props);
       this.props = props;
       done();
     }.bind(this));
@@ -85,16 +86,16 @@ module.exports = yeoman.generators.Base.extend({
       );
       this.fs.copyTpl(
         this.templatePath('_server.js'),
-        this.destinationPath('server.js',{
+        this.destinationPath('server.js'), {
           portNumber: this.props.portNumber
-        })
+        }
       );
     }
   },
   install: function() {
-    this.installDependencies({
-      bower: false,
-      npm: true
-    });
+    // this.installDependencies({
+    //     bower: false,
+    //     npm: true
+    // });
   }
 });

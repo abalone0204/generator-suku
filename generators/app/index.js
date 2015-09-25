@@ -16,7 +16,11 @@ module.exports = yeoman.generators.Base.extend({
       name: 'projectName',
       message: 'Your project\'s name?',
       default: 'myApp'
-    }];
+    },
+    type:'input',
+    name: 'portNumber',
+    message: 'You can decide which port your project server would run on',
+    default: 8080];
 
     this.prompt(prompts, function(props) {
       this.props = props;
@@ -43,12 +47,15 @@ module.exports = yeoman.generators.Base.extend({
     app: function() {
       this.fs.copyTpl(
         this.templatePath('_package.json'),
-        this.destinationPath('package.json'),
-        {entry: this.props.entry}
+        this.destinationPath('package.json'), {
+          entry: this.props.entry,
+          portNumber: this.props.portNumber
+        }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_webpack_config.js'),
-        this.destinationPath('webpack.config.js')
+        this.destinationPath('webpack.config.js'),
+        {portNumber:  this.props.portNumber}
       );
     },
     projectfiles: function() {
@@ -73,17 +80,17 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('_style.scss'),
         this.destinationPath('static/stylesheets/style.scss')
-        );
+      );
       this.fs.copy(
         this.templatePath('_server.js'),
         this.destinationPath('server.js')
-        );
+      );
     }
   },
   install: function() {
     this.installDependencies({
       bower: false,
       npm: true
-    });    
+    });
   }
 });

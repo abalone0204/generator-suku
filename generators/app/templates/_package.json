@@ -4,7 +4,7 @@
   "description": "A simple server for newbie or developming component",
   "main": "src/<%= entry %>",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "It's on todo list : )",
     "start": "webpack && node server.js && open http://localhost:<%= portNumber %>"
   },
   "keywords": [

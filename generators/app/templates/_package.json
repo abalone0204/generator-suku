@@ -5,7 +5,7 @@
   "main": "src/<%= entry %>",
   "scripts": {
     "test": "It's on todo list : )",
-    "start": "webpack && node server.js && open http://localhost:<%= portNumber %>"
+    "start": "webpack && node server.js"
   },
   "keywords": [
     "react", "webpack"

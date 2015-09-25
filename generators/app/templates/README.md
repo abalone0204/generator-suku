@@ -12,19 +12,13 @@ here is the basic and simple setting for web development.
 
 - Then you should install [npm](https://www.npmjs.com/)
 
-- And then you should install [webpack-dev-server](http://webpack.github.io/docs/webpack-dev-server.html)
-    
-    - Enter `sudo npm install -g webpack-dev-server`
-
-    - There is no magic, it's just a simple express server.
-
 - Run `npm install`
 
     - Every node modules dependency will be settle.
 
-- Enter `webpack-dev-server` in your command-line, and go to [http://localhost:8080/](http://localhost:8080/)
+- Enter `npm start` in your command-line, and go to [http://localhost:8080/](http://localhost:8080/)
 
-- And you can write your scss in `stylesheets/style.scss`, and requrie your node modules in your `js/main.js`
+- And you can write your scss in `static/stylesheets/style.scss`, and requrie your node modules in your `src/main.js`
 
 ------
 

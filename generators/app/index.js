@@ -16,11 +16,12 @@ module.exports = yeoman.generators.Base.extend({
       name: 'projectName',
       message: 'Your project\'s name?',
       default: 'myApp'
-    },
-    type:'input',
-    name: 'portNumber',
-    message: 'You can decide which port your project server would run on',
-    default: 8080];
+    }, {
+      type: 'input',
+      name: 'portNumber',
+      message: 'You can decide which port your project server would run on',
+      default: 8080
+    }];
 
     this.prompt(prompts, function(props) {
       this.props = props;
@@ -54,8 +55,9 @@ module.exports = yeoman.generators.Base.extend({
       );
       this.fs.copyTpl(
         this.templatePath('_webpack_config.js'),
-        this.destinationPath('webpack.config.js'),
-        {portNumber:  this.props.portNumber}
+        this.destinationPath('webpack.config.js'), {
+          portNumber: this.props.portNumber
+        }
       );
     },
     projectfiles: function() {

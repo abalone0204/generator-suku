@@ -6,6 +6,8 @@
 
 ##Intro
 
+- A super light-weight front-end dev-server.
+
 - Supports `scss`, `react`, and hot module reload.
 
 - It's super light than gulp , grunt, or something else.

@@ -2,13 +2,13 @@ var webpack = require('webpack');
 var path = require('path');
 
 module.exports = {
+    devtool: 'eval',
     entry: [
-        'webpack-dev-server/client?http://localhost:<%= portNumber %>',
-        'webpack/hot/only-dev-server',
-        './src/main.js'
+        'webpack-hot-middleware/client',
+        './src/main'
     ],
     output: {
-        path: path.join(__dirname, 'dist'),
+        path: path.join(__dirname, 'static/'),
         filename: "bundle.js",
         publicPath: '/static/'
     },
@@ -18,7 +18,7 @@ module.exports = {
             loader: 'style!css!sass'
         }, {
             test: /\.js$/,
-            loaders: ['react-hot', 'babel'],
+            loaders: ['babel'],
             include: path.join(__dirname, 'src')
         }, {
             test: /\.png$/,
@@ -29,6 +29,7 @@ module.exports = {
         }]
     },
     plugins: [
-        new webpack.HotModuleReplacementPlugin()
+        new webpack.HotModuleReplacementPlugin(),
+        new webpack.NoErrorsPlugin()
     ]
 };

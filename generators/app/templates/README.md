@@ -6,6 +6,8 @@ here is the basic and simple setting for web development.
 
 (Not only for react, but it's simple enough to test a simple react component)
 
+- Thanks @gaearon, [react-transform-boilerplate](https://github.com/gaearon/react-transform-boilerplate) really save my world from messy workflow.
+
 # Usage
 
 - First, you need to install [node.js](https://nodejs.org/en/)

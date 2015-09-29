@@ -50,15 +50,14 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copyTpl(
         this.templatePath('_package.json'),
         this.destinationPath('package.json'), {
+          projectName: this.props.projectName,
           entry: this.props.entry,
           portNumber: this.props.portNumber
         }
       );
-      this.fs.copyTpl(
-        this.templatePath('_webpack_config.js'),
-        this.destinationPath('webpack.config.js'), {
-          portNumber: this.props.portNumber
-        }
+      this.fs.copy(
+        this.templatePath('_webpack_config.dev.js'),
+        this.destinationPath('webpack.config.dev.js')
       );
     },
     projectfiles: function() {
@@ -69,6 +68,10 @@ module.exports = yeoman.generators.Base.extend({
       this.fs.copy(
         this.templatePath('_Hello.js'),
         this.destinationPath('src/components/Hello.js')
+      );
+      this.fs.copy(
+        this.templatePath('babelrc'),
+        this.destinationPath('.babelrc')
       );
       this.fs.copy(
         this.templatePath('jshintrc'),

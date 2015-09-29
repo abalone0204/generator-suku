@@ -1,6 +1,6 @@
 {
   "name": "generator-suku",
-  "version": "0.0.13",
+  "version": "0.5.0",
   "description": "generator for simple component lab",
   "license": "MIT",
   "main": "generators/app/index.js",

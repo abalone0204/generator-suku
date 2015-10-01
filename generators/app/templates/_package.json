@@ -4,8 +4,11 @@
   "description": "A simple server for newbie or developming component",
   "main": "src/<%= entry %>",
   "scripts": {
-    "test": "It's on todo list : )",
-    "start": "node server.js"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "clean": "rimraf static/*.js",
+    "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build": "npm run clean && npm run build:webpack"
   },
   "keywords": [
     "react", "webpack"

@@ -59,6 +59,10 @@ module.exports = yeoman.generators.Base.extend({
         this.templatePath('_webpack_config.dev.js'),
         this.destinationPath('webpack.config.dev.js')
       );
+      this.fs.copy(
+        this.templatePath('_webpack_config.prod.js'),
+        this.destinationPath('webpack.config.prod.js')
+      );
     },
     projectfiles: function() {
       this.fs.copy(

@@ -22,6 +22,13 @@ here is the basic and simple setting for web development.
 
 - And you can write your scss in `static/stylesheets/style.scss`, and requrie your node modules in your `src/main.js`
 
+- If you need to compile the `bundle.js`:
+
+```
+npm run build
+```
+
+
 ------
 
 - Feel free to tell me which part is ambiguous or I can make some improvement.

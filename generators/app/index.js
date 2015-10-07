@@ -55,9 +55,10 @@ module.exports = yeoman.generators.Base.extend({
           portNumber: this.props.portNumber
         }
       );
-      this.fs.copy(
+      this.fs.copyTpl(
         this.templatePath('_webpack_config.dev.js'),
-        this.destinationPath('webpack.config.dev.js')
+        this.destinationPath('webpack.config.dev.js'),
+        {portNumber: this.props.portNumber}
       );
       this.fs.copy(
         this.templatePath('_webpack_config.prod.js'),

@@ -4,7 +4,7 @@ var path = require('path');
 module.exports = {
     devtool: 'eval',
     entry: [
-        'webpack-hot-middleware/client',
+        'webpack-hot-middleware/client?path=http://localhost:<%= portNumber %>/__webpack_hmr&reload=true',,
         './src/main'
     ],
     output: {

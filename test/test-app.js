@@ -15,10 +15,8 @@ describe('suku:app', function () {
 
   it('creates files', function () {
     assert.file([
-      'bower.json',
       'package.json',
-      '.editorconfig',
-      '.jshintrc'
+      'README.md'
     ]);
   });
 });

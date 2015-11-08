@@ -28,6 +28,9 @@ here is the basic and simple setting for web development.
 npm run build
 ```
 
+# Todo
+
+[] Test the content 
 
 ------
 

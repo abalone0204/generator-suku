@@ -5,9 +5,6 @@ export default class Hello {
     return (
         <div className="greeting">
           <h1>Suku</h1>
-          <p>
-            sudoDennyKu
-          </p>
         </div>
     );
   }

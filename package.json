@@ -1,17 +1,21 @@
 {
   "name": "generator-suku",
-  "version": "0.6.3",
   "description": "generator for simple component lab",
   "license": "MIT",
   "main": "generators/app/index.js",
-  "repository": "abalone0204/generator-suku",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abalone0204/generator-suku.git"
+  },
   "author": {
     "name": "Tsung Chen Ku",
     "email": "abalone0204@gmail.com",
     "url": "https://github.com/abalone0204"
   },
   "scripts": {
-    "test": "mocha"
+    "commit": "git-cz",
+    "test": "mocha",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "files": [
     "generators"
@@ -26,6 +30,12 @@
     "yosay": "^1.0.2"
   },
   "devDependencies": {
-    "mocha": "*"
+    "commitizen": "^2.4.1",
+    "cz-conventional-changelog": "^1.1.4",
+    "mocha": "*",
+    "semantic-release": "^4.3.5"
+  },
+  "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
   }
 }

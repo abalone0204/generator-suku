@@ -12,11 +12,18 @@ describe('suku:app', function () {
       .withPrompts({ someOption: true })
       .on('end', done);
   });
-
   it('creates files', function () {
     assert.file([
       'package.json',
-      'README.md'
+      'README.md',
+      'webpack.config.dev.js',
+      'webpack.config.prod.js',
+      '.babelrc',
+      'index.html',
+      'static/stylesheets/style.scss',
+      'server.js',
+      'src/components/Hello.js',
+      'src/main.js'
     ]);
   });
 });

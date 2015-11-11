@@ -8,7 +8,8 @@
     "start": "node server.js",
     "clean": "rimraf static/*.js",
     "build:webpack": "NODE_ENV=production webpack --config webpack.config.prod.js",
-    "build": "npm run clean && npm run build:webpack"
+    "build": "npm run clean && npm run build:webpack",
+    "commit": "git-cz"
   },
   "keywords": [
     "react", "webpack"
@@ -33,11 +34,21 @@
     "webpack": "^1.12.2",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-dev-server": "^1.11.0",
-    "webpack-hot-middleware": "^2.2.1"
+    "webpack-hot-middleware": "^2.2.1",
+    "commitizen": "^2.4.4",
+    "cz-conventional-changelog": "^1.1.4"
   },
   "dependencies": {
     "jquery": "^2.1.4",
     "react": "^0.14.2",
     "react-dom": "^0.14.2"
+  },
+    "czConfig": {
+    "path": "node_modules/cz-conventional-changelog"
+  },
+  "config": {
+    "ghooks": {
+      "pre-commit": "npm run test && npm run check-coverage"
+    }
   }
 }
